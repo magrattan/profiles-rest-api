@@ -1,0 +1,16 @@
+<form action = "{%url 'about' %}" >
+  <h1> The Word Count is: {{count}}</h1>
+  <a href="{% url 'about'%}">About</a>
+  <br>
+  {{fulltext}}
+
+  <h1> Word Count </h1>
+    {% for word, counttotal in worddict %}
+      Word: {{word }} {{counttotal}} <br>
+
+
+    {%endfor%}
+
+
+
+  </form>
